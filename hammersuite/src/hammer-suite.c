@@ -127,10 +127,10 @@ char *dAddr_2_str(DRAMAddr d_addr, uint8_t fields)
 
 char *hPatt_2_str(HammerPattern * h_patt, int fields)
 {
-	static char patt_str[256];
+	static char patt_str[1024];
 	char *dAddr_str;
 
-	memset(patt_str, 0x00, 256);
+	memset(patt_str, 0x00, 1024);
 
 	for (int i = 0; i < h_patt->len; i++) {
 		dAddr_str = dAddr_2_str(h_patt->d_lst[i], fields);
